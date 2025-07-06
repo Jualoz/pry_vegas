@@ -6,10 +6,10 @@ import { Component, HostListener } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent {
-bannerOpacity = '1';
+  bannerOpacity = '1';
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
