@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/pry_vegas",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
