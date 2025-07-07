@@ -1,21 +1,47 @@
 /* Banner principal */
-.banner {
-  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/18/a6/10/interior-restaurante.jpg?w=600&h=-1&s=1');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+.banner-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.banner h1 {
-  font-size: 3rem;
-  margin: 0;
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
-.banner p {
-  font-size: 1.5rem;
-  margin-top: 10px;
+/* Banner desaparece al hacer scroll */
+:host ::ng-deep .banner-container {
+  opacity: calc(1 - min(1, var(--scroll-ratio, 0)));
+}
+
+/* Logo centrado inicialmente, luego se mueve arriba a la izquierda */
+.logo {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+  width: 20em;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Logo sticky en esquina superior izquierda */
+.logo-wrapper {
+  position: sticky;
+  top: 10px;
+  left: -500px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, left 0.3s ease;
 }
 
 /* Secciones generales */

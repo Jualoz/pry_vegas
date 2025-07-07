@@ -1,8 +1,9 @@
 <!-- Banner principal -->
-<header class="banner" [ngStyle]="{ opacity: bannerOpacity }">
-  <h1>Restaurante Delicioso</h1>
-  <p>¡Sabores que enamoran!</p>
-</header>
+<div class="banner-container">
+  <img [ngStyle]="{ opacity: bannerOpacity }" src="assets/banner.png" alt="Banner" class="banner-img" />
+  <img src="assets/las_vegas.png" alt="Las Vegas" class="logo" [ngStyle]="logoStyles" />
+</div>
+
 
 <!-- Sección de información -->
 <section class="info">
