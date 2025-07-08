@@ -1,9 +1,8 @@
 <!-- Banner principal -->
 <div class="banner-container">
   <img [ngStyle]="{ opacity: bannerOpacity }" src="../../../assets/banner.png" alt="Banner" class="banner-img" />
-  <img src="las_vegas.png" alt="Las Vegas" class="logo" [ngStyle]="logoStyles" />
+  <img src="../../../assets/las_vegas.png" alt="Las Vegas" class="logo" [ngStyle]="logoStyles" />
 </div>
-
 
 <!-- Sección de información -->
 <section class="info">
@@ -13,34 +12,67 @@
 
 <!-- Sección de menú -->
 <section class="menu">
-  <h2>Menú</h2>
+  <h2>Menú del Día</h2>
+
+  <h3>Platos Especiales</h3>
+  @if (especialesDelDia.length > 0) {
+    <ul>
+      @for (item of especialesDelDia; track $index) {
+        <li>
+          <span>{{ item.name }}</span>
+          <span>${{ item.price | number:'1.0-0' }}</span>
+        </li>
+      }
+    </ul>
+  }
+
+  <h3>Platos Corrientes</h3>
   <ul>
-    <li>
-      <span>Bandeja Paisa</span>
-      <span>$25.000</span>
-    </li>
-    <li>
-      <span>Hamburguesa Artesanal</span>
-      <span>$18.000</span>
-    </li>
-    <li>
-      <span>Sopa del día</span>
-      <span>$12.000</span>
-    </li>
+    @for (item of corrientes; track $index) {
+      <li>
+        <span>{{ item.name }}</span>
+        <span>${{ item.price | number:'1.0-0' }}</span>
+      </li>
+    }
+  </ul>
+
+  <h3>Adicionales</h3>
+  <ul>
+    @for (item of normales; track $index) {
+      <li>
+        <span>{{ item.name }}</span>
+        <span>${{ item.price | number:'1.0-0' }}</span>
+      </li>
+    }
+  </ul>
+
+  <h3>Acompañamientos incluidos</h3>
+  <ul>
+    @for (item of acompanamientos; track $index) {
+      <li>
+        ✅ {{ item }}
+      </li>
+    }
   </ul>
 </section>
 
 <!-- Sección de horarios -->
 <section class="horarios">
   <h2>Horarios</h2>
-  <p>Lunes a Sábado: 12:00 PM – 10:00 PM</p>
-  <p>Domingos y Festivos: 1:00 PM – 8:00 PM</p>
+  <p>Lunes a Sábado: 07:00 AM - 03:00 PM</p>
+  <p>Domingos y Festivos: 08:00 AM - 03:00 PM</p>
 </section>
 
 <!-- Sección de contacto -->
 <section class="contacto">
   <h2>Contacto</h2>
-  <p>📍 Calle 123 #45-67</p>
-  <p>📞 (7) 654 3210</p>
-  <p>📧 {{ 'contacto@restaurantedelicioso.com' }}</p>
+  <p>📍 Calle 11 #22-59 San Francisco, Bucaramanga</p>
+  <p>📞 322 355 2844 </p>
+
+  <a class="whatsapp-button"
+     href="https://wa.me/573223552844?text=Hola%2C%20me%20gustar%C3%ADa%20ver%20el%20men%C3%BA%20del%20d%C3%ADa."
+     target="_blank"
+     rel="noopener noreferrer">
+    📲 Escríbenos por WhatsApp
+  </a>
 </section>
