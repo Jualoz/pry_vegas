@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel · Restaurante Las Vegas</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section class="login" id="loginView" hidden>
+    <form class="login__card" id="loginForm">
+      <img src="assets/logo.png" alt="Restaurante Las Vegas" class="login__logo">
+      <h1>Panel de administración</h1>
+      <p class="muted">Ingresa para actualizar el menú, precios y horarios.</p>
+
+      <div class="demo-note" id="demoNote" hidden>
+        <strong>Modo demostración.</strong> Firebase aún no está configurado, así que los cambios se guardan solo en este navegador.
+        Sigue la guía del archivo <code>LEEME.md</code> para activarlo.
+      </div>
+
+      <div id="credFields">
+        <label>Correo<input type="email" id="email" autocomplete="username" required></label>
+        <label>Contraseña<input type="password" id="password" autocomplete="current-password" required></label>
+      </div>
+      <p class="error" id="loginError" role="alert"></p>
+      <button class="btn btn--primary btn--block" type="submit" id="loginBtn">Ingresar</button>
+      <button class="link" type="button" id="forgotBtn">¿Olvidaste tu contraseña?</button>
+      <a class="link" href="index.html">← Volver al sitio</a>
+    </form>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="appView" hidden>
+    <header class="topbar">
+      <img src="assets/logo.png" alt="" class="topbar__logo">
+      <div class="topbar__title"><strong>Panel de administración</strong><small id="userEmail"></small></div>
+      <a class="btn btn--ghost" href="index.html" target="_blank">Ver sitio ↗</a>
+      <button class="btn btn--ghost" id="logoutBtn">Salir</button>
+    </header>
+
+    <nav class="sections" id="sectionTabs">
+      <button data-sec="especiales" class="is-active">⭐ Especiales</button>
+      <button data-sec="corrientes">🍛 Corrientes</button>
+      <button data-sec="adicionales">➕ Adicionales</button>
+      <button data-sec="planes">📦 Planes</button>
+      <button data-sec="general">⚙️ Horarios y aviso</button>
+    </nav>
+
+    <main class="wrap" id="editor"></main>
+
+    <div class="savebar" id="saveBar">
+      <span id="saveStatus">Sin cambios</span>
+      <button class="btn btn--ghost" id="discardBtn" disabled>Descartar</button>
+      <button class="btn btn--primary" id="saveBtn" disabled>Guardar cambios</button>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

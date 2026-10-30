@@ -1,16 +1,11 @@
 {
   "hosting": {
-    "public": "dist/pry_vegas/browser",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*"],
+    "cleanUrls": true,
+    "headers": [
+      { "source": "**/*.@(css|js|png)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
     ]
-  }
+  },
+  "firestore": { "rules": "firestore.rules" }
 }
