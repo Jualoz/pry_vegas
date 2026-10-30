@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurante Las Vegas · Sabor casero en Bucaramanga</title>
+  <meta name="description" content="Almuerzos caseros, platos especiales, planes semanales y estudiantiles en el barrio San Francisco, Bucaramanga. Domicilios y pedidos por WhatsApp.">
+  <meta name="theme-color" content="#0E5A2C">
+  <meta property="og:title" content="Restaurante Las Vegas · Sabor casero que te hace volver">
+  <meta property="og:description" content="Almuerzos caseros desde $8.000 en San Francisco, Bucaramanga. Pide por WhatsApp.">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="announce" id="announce" hidden></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__logo" aria-label="Restaurante Las Vegas, inicio">
+        <img src="assets/logo.png" alt="Restaurante Las Vegas">
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#planes">Planes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" data-wa="Hola Las Vegas 👋, quiero hacer un pedido." target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Pedir ahora
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__blob" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <span class="pill reveal"><span class="dot" id="statusDot"></span><span id="statusText">Comida casera en Bucaramanga</span></span>
+          <h1 class="reveal">Sabor casero que te hace <span class="script">volver</span></h1>
+          <p class="hero__lead reveal">Almuerzos completos con sopa, arroz, ensalada, principio y limonada, preparados cada día como en casa. Ven al barrio San Francisco o pide a domicilio.</p>
+          <div class="hero__actions reveal">
+            <a href="#menu" class="btn btn--primary btn--lg">Ver menú del día
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" data-wa="Hola Las Vegas 👋, quiero hacer un pedido a domicilio." target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Pedir por WhatsApp
+            </a>
+          </div>
+          <ul class="hero__stats reveal">
+            <li><strong>5+</strong><span>años de sazón</span></li>
+            <li><strong id="minPrice">$8.000</strong><span>almuerzos desde</span></li>
+            <li><strong>5.0 ★</strong><span>en Google</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="plate">
+            <div class="plate__ring" aria-hidden="true"></div>
+            <img class="plate__img" src="https://images.unsplash.com/photo-1723693407562-bb4fcae76797?auto=format&fit=crop&w=900&h=900&q=80" alt="Plato típico colombiano con carne, arroz, huevo y maduro">
+            <img class="plate__mini plate__mini--1" src="https://images.unsplash.com/photo-1714383611437-485d97141913?auto=format&fit=crop&w=240&h=240&q=70" alt="">
+            <img class="plate__mini plate__mini--2" src="https://images.unsplash.com/photo-1548704087-b11dab0fbec0?auto=format&fit=crop&w=240&h=240&q=70" alt="">
+            <img class="plate__mini plate__mini--3" src="https://images.unsplash.com/photo-1573225342350-16731dd9bf3d?auto=format&fit=crop&w=240&h=240&q=70" alt="">
+          </div>
+          <div class="float-card float-card--a">
+            <span class="float-card__ico">🛵</span>
+            <div><strong>Domicilio gratis</strong><small>en el barrio San Francisco</small></div>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="float-card__ico">⭐</span>
+            <div><strong>5.0 en Google</strong><small class="stars">★★★★★</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES STRIP -->
+    <section class="strip">
+      <div class="container strip__grid">
+        <div class="feature reveal">
+          <span class="feature__ico">🍲</span>
+          <div><h3>Almuerzo completo</h3><p>Sopa, seco y limonada incluidos</p></div>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__ico">🛵</span>
+          <div><h3>Domicilios</h3><p>Gratis en San Francisco · fuera del barrio según distancia</p></div>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__ico">💳</span>
+          <div><h3>Pagos fáciles</h3><p>Efectivo, Nequi, Daviplata y Bre-B</p></div>
+        </div>
+        <div class="feature reveal">
+          <span class="feature__ico">⏰</span>
+          <div><h3>Abrimos temprano</h3><p id="stripHours">Lun–Sáb desde las 7:00 a.m.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section" id="menu">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Nuestro menú</span>
+          <h2>Elige tu <span class="script">almuerzo</span> de hoy</h2>
+          <p>Todos los platos incluyen el acompañamiento completo de la casa.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist">
+          <button class="tab is-active" role="tab" data-tab="especiales">⭐ Especiales</button>
+          <button class="tab" role="tab" data-tab="corrientes">🍛 Corrientes</button>
+          <button class="tab" role="tab" data-tab="adicionales">➕ Adicionales</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+
+        <div class="includes reveal">
+          <h3>Cada almuerzo incluye</h3>
+          <ul id="includes"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section section--dark" id="planes">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow eyebrow--light">Paquetes y beneficios</span>
+          <h2>Planes para <span class="script">ahorrar</span></h2>
+          <p>Ideal para estudiantes, oficinas y quienes no quieren pensar qué almorzar.</p>
+        </header>
+        <div class="plans" id="plans"></div>
+        <div class="extras" id="extras"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="nosotros">
+      <div class="container about">
+        <div class="about__media reveal">
+          <img class="about__img about__img--main" src="https://images.unsplash.com/photo-1584455486010-760bd0b28fc2?auto=format&fit=crop&w=800&h=950&q=80" alt="Mesa con variedad de platos caseros">
+          <img class="about__img about__img--small" src="https://images.unsplash.com/photo-1752367799020-48160b694eb9?auto=format&fit=crop&w=500&h=500&q=80" alt="Almuerzo con carne, arroz y ensalada">
+          <div class="about__badge"><strong>5+</strong><span>años</span></div>
+        </div>
+        <div class="about__text reveal">
+          <span class="eyebrow">Sobre nosotros</span>
+          <h2>Un restaurante <span class="script">familiar</span> con sazón de hogar</h2>
+          <p>En Restaurante Las Vegas llevamos más de 5 años sirviendo platos típicos colombianos en el barrio San Francisco de Bucaramanga. Cocinamos cada mañana con ingredientes frescos y recetas de familia, para que almorzar fuera de casa se sienta como almorzar en casa.</p>
+          <ul class="checks">
+            <li>Comida preparada el mismo día</li>
+            <li>Porciones generosas a precio justo</li>
+            <li>Atención cercana, como en familia</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary">Visítanos <svg class="ico" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--soft" id="resenas">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Lo que dicen en Google</span>
+          <h2>Clientes <span class="script">felices</span></h2>
+        </header>
+        <div class="reviews">
+          <article class="review reveal">
+            <div class="review__top"><span class="avatar">G</span><div><strong>Cliente en Google</strong><small>Reseña de Google Maps</small></div></div>
+            <div class="stars">★★★★★</div>
+            <p class="review__meta">Precio por persona: $1–10.000</p>
+          </article>
+          <article class="review reveal">
+            <div class="review__top"><span class="avatar">G</span><div><strong>Cliente en Google</strong><small>Reseña de Google Maps</small></div></div>
+            <div class="stars">★★★★★</div>
+            <ul class="scores"><li>Comida <b>5/5</b></li><li>Servicio <b>5/5</b></li><li>Ambiente <b>5/5</b></li></ul>
+          </article>
+          <article class="review reveal">
+            <div class="review__top"><span class="avatar">G</span><div><strong>Cliente en Google</strong><small>Consumo en el lugar · Almuerzo</small></div></div>
+            <div class="stars">★★★★★</div>
+            <ul class="scores"><li>Comida <b>5/5</b></li><li>Servicio <b>5/5</b></li><li>Ambiente <b>5/5</b></li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Visítanos o pide a domicilio</span>
+          <h2>Te esperamos en <span class="script">San Francisco</span></h2>
+
+          <div class="info-card">
+            <span class="info-card__ico">📍</span>
+            <div><h3>Dirección</h3><p>Calle 11 #22-59, San Francisco, Bucaramanga</p></div>
+          </div>
+          <div class="info-card">
+            <span class="info-card__ico">⏰</span>
+            <div><h3>Horarios</h3><div id="hours"></div></div>
+          </div>
+          <div class="info-card">
+            <span class="info-card__ico">🛵</span>
+            <div><h3>Domicilios</h3><p>Gratis dentro del barrio San Francisco. Fuera del barrio el domicilio se cobra según la distancia.</p></div>
+          </div>
+          <div class="info-card">
+            <span class="info-card__ico">💳</span>
+            <div>
+              <h3>Medios de pago</h3>
+              <ul class="pay"><li>Efectivo</li><li>Nequi</li><li>Daviplata</li><li>Transferencia Bre-B</li></ul>
+            </div>
+          </div>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary btn--lg" data-wa="Hola Las Vegas 👋, quiero hacer un pedido." target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn--ghost btn--lg" href="tel:+573223552844">📞 322 355 2844</a>
+          </div>
+        </div>
+        <div class="contact__map reveal">
+          <iframe title="Mapa: Restaurante Las Vegas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Calle+11+%2322-59,+San+Francisco,+Bucaramanga,+Santander&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>¿Ya sabes qué vas a <span class="script">almorzar</span>?</h2>
+          <p>Escríbenos y te lo llevamos calientito.</p>
+        </div>
+        <a class="btn btn--light btn--lg" data-wa="Hola Las Vegas 👋, quiero hacer un pedido." target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Pedir por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logo.png" alt="Restaurante Las Vegas" class="footer__logo">
+      <p>Sabor casero que te hace volver.<br>Calle 11 #22-59, San Francisco, Bucaramanga · 322 355 2844</p>
+      <p class="footer__small">© <span id="year"></span> Restaurante Las Vegas · Fotos de referencia: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> · <a href="admin.html">Administrar</a></p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Hola Las Vegas 👋, quiero hacer un pedido." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.04c0-5.2 4.24-9.44 9.45-9.44a9.4 9.4 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.27 0 11.37-5.1 11.37-11.37 0-3.04-1.18-5.9-3.34-8.04z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
